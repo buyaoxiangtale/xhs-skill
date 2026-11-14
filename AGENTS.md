@@ -7,4 +7,4 @@ This repository is the development source for `xhs-vn-post`. Keep the skill entr
 - Update `references/config.md` and `examples/post.example.json` when changing the configuration contract.
 - Run `python -m unittest discover -s scripts -p "test_*.py" -v` after script changes. Tests need Pillow and a Chinese font; Linux uses Noto CJK.
 - Do not commit personal assets, review packages, account credentials, cookies, or installed-client configuration. Use ignored `work/` for local projects.
-- Installed skill copies are separate from this development checkout; do not silently replace them.
+- Installed skills may link to this checkout. Treat linked installs as the same source and preserve existing links; change installation locations only when requested.

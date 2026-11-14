@@ -30,6 +30,14 @@ Linux/macOS 将以上解释器路径替换为 `.venv/bin/python`。
 
 ## 作为 skill 安装
 
-将包含 `SKILL.md`、`scripts/`、`references/` 和 `examples/` 的仓库目录复制到所用客户端的 skills 目录，文件夹命名为 `xhs-vn-post`。例如 Claude Code 使用 `~/.claude/skills/xhs-vn-post`，Codex 使用 `~/.codex/skills/xhs-vn-post`。
+开发时将客户端的 skill 安装位置链接到本仓库根目录，安装名称保持 `xhs-vn-post`。这样修改本仓库即可直接更新安装入口，无需重新复制。
 
-后续修改以本仓库为准；已安装的副本需要重新复制更新。`xiaohongshu-upload` 和 `xiaoheihe-article-publish` 为可选的实际发布能力，不是离线合成的运行依赖。
+Windows 可使用目录联接（Junction），支持安装位置与开发目录位于不同盘符。在仓库根目录执行：
+
+```powershell
+New-Item -ItemType Junction -Path "$env:USERPROFILE\.claude\skills\xhs-vn-post" -Target (Get-Location).Path
+```
+
+安装位置必须尚不存在；如果已有普通目录，先移到 `skills` 目录之外备份，再创建链接，避免备份被当成另一份 skill 加载。其他客户端按其实际 skills 目录选择安装位置；已有入口若链接到这个安装位置，可继续复用。
+
+`xiaohongshu-upload` 和 `xiaoheihe-article-publish` 为可选的实际发布能力，不是离线合成的运行依赖。
