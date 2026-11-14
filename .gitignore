@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Local work, generated packages, and account credentials.
+/work/
+/out/
+/post.json
+.env
+.env.*
+!.env.example
+cookies/
+*cookie*.json
+*.log
+
+# Editor and OS files.
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

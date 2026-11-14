@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "work_title": "《作品名》",
+  "chapter_tag": "第一章 · 情景名",
+  "output_dir": "out",
+  "text_overflow": "error",
+  "background": "assets/background.png",
+  "portraits": {
+    "角色名": "assets/portrait.png"
+  },
+  "style": {
+    "name_colors": {
+      "角色名": "#7058a8e8"
+    }
+  },
+  "post": {
+    "platform": "xiaohongshu",
+    "title": "填写本次标题",
+    "note": "填写发布正文全文，说明真实作品内容。",
+    "tags": []
+  },
+  "images": [
+    {
+      "kind": "image",
+      "path": "assets/cover.png",
+      "fit": "blur",
+      "source": "填写封面素材出处"
+    },
+    {
+      "kind": "scene",
+      "speaker": "角色名",
+      "text": "替换为已经核对过的真实剧本原句。",
+      "sprites": [
+        {
+          "name": "角色名"
+        }
+      ],
+      "source": {
+        "scene_id": "填写实际情景ID",
+        "paragraph_id": "填写实际段落ID"
+      }
+    },
+    {
+      "kind": "image",
+      "path": "assets/portrait.png",
+      "fit": "solid",
+      "matte": "#f6f3ef",
+      "source": "填写角色立绘素材ID"
+    }
+  ]
+}
